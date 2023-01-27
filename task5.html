@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK5</title>
+</head>
+
+<body>
+    Donner
+    <input type="text">
+    <button>Ajouter</button>
+
+
+
+    <script>
+
+
+        const persons = [
+
+            { name: "MONCEF", age: 13 },
+            { name: "BAHIJA", age: 23 },
+            { name: "ALA", age: 18 },
+
+        ];
+        function MineurMajeur(persons) {
+            for (let i = 0; i < persons.length; i++) {
+                if (persons[i].age < 18) {
+                    persons[i].status = "mineur";
+                }
+                else {
+                    persons[i].status = "majeur";
+                }
+            }
+            return persons;
+        }
+        console.log(MineurMajeur(persons));
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str1 = 'ahmed&ferah-moez&saadi-fadhel&gadihi';
+
+        function FormatToArray(str1){
+            let L=str1.split("-");
+              let L1=L.map(function(per){
+                let [first,last]=per.split("&");
+                   return {firstname: first,lastname:last}
+              });
+              return L1;
+        }
+        console.log(FormatToArray(str1));
+
+        /*function FormatToArray(str1) {   
+            let L=[{firstname:"",lastname:""}];
+            console.log(L);
+            const L1 = str1.split("-");
+            for (let i = 0; i < L1.length; i++) {
+                L1[i]=L1[i].split("&");
+                for (let j = 0; j < L1.length; j++) {
+                     L.push= {firstname:L1[i][j],lastname:L1[i][j]};
+                    //console.log(L[j]);
+                    //console.log(L1[i][j]);
+                }
+            }
+            return L;
+        }
+        console.log(FormatToArray(str1));*/
+    </script>
+</body>
+
+</html>
